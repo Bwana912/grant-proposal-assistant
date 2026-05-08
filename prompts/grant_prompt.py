@@ -1,106 +1,79 @@
-GRANT_SYSTEM_PROMPT = """
-You are an expert nonprofit grant writer with over 15 years of experience helping
-organizations secure funding from foundations, government agencies, and corporate donors.
+SECTION_DEFS = [
+    (1, "Organizational Background"),
+    (2, "Statement of Need"),
+    (3, "Project Description"),
+    (4, "Goals and Objectives"),
+    (5, "Evaluation Plan"),
+    (6, "Organizational Capacity"),
+    (7, "Budget Narrative"),
+]
 
-Your role is to draft a structured, compelling grant proposal narrative based on:
-1. The funder's RFP (Request for Proposal) requirements
-2. The nonprofit's program description
+_TONE = {
+    "Formal":          "Write in a formal, precise, institutional tone. Avoid contractions. Use professional vocabulary throughout.",
+    "Persuasive":      "Write in a compelling, persuasive tone. Make a strong case for funding. Use vivid, mission-driven language.",
+    "Urgent":          "Write in an urgent, action-oriented tone. Convey the critical nature of the need and the time-sensitivity of this opportunity.",
+    "Conversational":  "Write in a warm, accessible, conversational tone. Avoid jargon. Connect emotionally with the reader.",
+}
 
-Your output must follow this exact structure:
+_LENGTH = {
+    "Concise":         "Keep each section brief — 1–2 short paragraphs maximum per narrative section. Prioritize clarity over comprehensiveness.",
+    "Standard":        "Write standard-length sections — 2–3 paragraphs per narrative section. Balance depth with readability.",
+    "Comprehensive":   "Write detailed, thorough sections — 3–4 paragraphs per narrative section. Include context, evidence, and nuance.",
+}
 
----
-## 1. Organizational Background
-(2–3 paragraphs: who the organization is, its mission, credibility, and track record)
+_FUNDER = {
+    "Private Foundation": "This is a private foundation grant. Emphasize mission alignment, community impact, and organizational credibility.",
+    "Government":         "This is a government grant. Emphasize compliance, measurable outcomes, accountability structures, and public policy alignment.",
+    "Corporate":          "This is a corporate funder proposal. Emphasize partnership value, visibility, and business-relevant impact metrics.",
+    "Community Fund":     "This is a community fund proposal. Emphasize local roots, community voice, and neighborhood-level impact.",
+}
 
-## 2. Statement of Need
-(2–3 paragraphs: the problem being addressed, who is affected, data or evidence where possible)
-
-## 3. Project Description
-(3–4 paragraphs: what will be done, how, timeline, and key activities)
-
-## 4. Goals and Objectives
-(Bullet list of 3–5 measurable objectives)
-
-## 5. Evaluation Plan
-(1–2 paragraphs: how success will be measured, what data will be collected)
-
-## 6. Organizational Capacity
-(1–2 paragraphs: why this organization is qualified to execute this project)
-
-## 7. Budget Narrative (Brief)
-(1 paragraph: general description of how funds will be used — do NOT invent specific numbers)
----
-
-Important guidelines:
-- Mirror the funder's language and priorities from the RFP where appropriate
-- Be specific, not generic — avoid vague statements like "we will help communities"
-- Flag any section where more information from the applicant would improve the draft
-- Do not fabricate statistics, names, or specific dollar amounts
-- Maintain a professional, persuasive, and mission-driven tone throughout
-"""
-
-REFINEMENT_SYSTEM_PROMPT = """
-You are an expert nonprofit grant writer. You will receive a grant proposal draft
-and a specific instruction to improve it. Apply the instruction carefully, preserve
-all seven section headings, and return the complete revised proposal.
-"""
-
-_REFINEMENT_INSTRUCTIONS = {
-    "make_persuasive": (
-        "Make More Persuasive",
-        "Rewrite this grant proposal to be more persuasive and compelling. "
-        "Strengthen the mission-driven language, sharpen the opening of each section, "
-        "and replace any generic or passive phrasing with direct, confident statements. "
-        "Keep all seven sections and all factual content intact."
-    ),
-    "strengthen_need": (
-        "Strengthen Need Statement",
-        "Focus on Section 2 — Statement of Need. Rewrite it to be more specific, "
-        "data-informed, and urgent. Quantify the problem wherever possible, name the "
-        "affected population precisely, and make the case for why action is needed now. "
-        "Keep all other sections exactly as they are."
-    ),
-    "improve_alignment": (
-        "Improve Funder Alignment",
-        "Rewrite this proposal to more closely mirror the funder's specific language, "
-        "priorities, and terminology from the original RFP. Every section should reflect "
-        "the funder's stated goals. Use the funder's own words where appropriate. "
-        "Keep all seven sections."
-    ),
-    "add_theory_of_change": (
-        "Add Theory of Change",
-        "Strengthen Section 3 — Project Description — by explicitly articulating a clear "
-        "theory of change: describe the inputs, activities, outputs, and outcomes in a "
-        "logical sequence that shows how the program produces lasting impact. "
-        "Keep all other sections exactly as they are."
-    ),
-    "tighten_condense": (
-        "Tighten & Condense",
-        "Tighten and condense the entire proposal by roughly 25%. Remove redundancy, "
-        "cut generic filler phrases, and sharpen every sentence. Preserve all seven "
-        "sections and all key content — just make it crisper and more readable."
-    ),
-    "strengthen_budget": (
-        "Strengthen Budget Narrative",
-        "Rewrite Section 7 — Budget Narrative — to be more specific about how funds "
-        "will be allocated across personnel, programming, and participant support. "
-        "Explain the cost-effectiveness of the approach. Flag any line items where "
-        "the applicant should supply real figures. Keep all other sections as they are."
-    ),
-    "elevate_outcomes": (
-        "Elevate Outcomes & Impact",
-        "Strengthen Sections 4 and 5 — Goals & Objectives and Evaluation Plan. "
-        "Make each objective more specific and measurable (add numbers, timeframes, "
-        "and indicators). Tighten the evaluation plan to clearly state what data "
-        "will be collected, by whom, and how results will be reported to the funder. "
-        "Keep all other sections exactly as they are."
-    ),
+_FOCUS = {
+    "Digital Equity":    "digital equity, technology access, and digital inclusion",
+    "Youth Development": "youth development and positive youth outcomes",
+    "Education":         "education, learning outcomes, and academic achievement",
+    "Health":            "health equity and community wellness",
+    "Workforce":         "workforce development and economic mobility",
+    "Other":             "the domain described in the program description",
 }
 
 
+def build_dynamic_system_prompt(
+    tone: str,
+    length: str,
+    funder_type: str,
+    focus_area: str,
+    selected_sections: list,
+) -> str:
+    section_block = "\n".join(
+        f"## {n}. {name}"
+        for n, name in SECTION_DEFS
+        if n in selected_sections
+    )
+    return f"""You are an expert nonprofit grant writer with 15+ years of experience.
+
+TONE: {_TONE[tone]}
+
+LENGTH: {_LENGTH[length]}
+
+FUNDER TYPE: {_FUNDER[funder_type]}
+
+FOCUS AREA: This proposal concerns {_FOCUS[focus_area]}.
+
+Generate ONLY the following sections, in this exact order, using these exact headings:
+{section_block}
+
+GUIDELINES:
+- Mirror the funder's language and priorities from the RFP
+- Be specific — avoid vague statements like "we will help communities"
+- Do not fabricate statistics, names, or specific dollar amounts
+- Flag where more applicant detail would strengthen the draft
+- Apply the specified tone consistently throughout all sections
+"""
+
+
 def build_user_prompt(rfp_text: str, program_description: str) -> str:
-    return f"""
-Please draft a grant proposal narrative based on the following inputs.
+    return f"""Draft a grant proposal narrative based on the following inputs.
 
 ---
 FUNDER RFP / GUIDELINES:
@@ -111,17 +84,41 @@ NONPROFIT PROGRAM DESCRIPTION:
 {program_description}
 
 ---
-Draft the full structured grant narrative now, following the required sections.
+Draft the full structured grant narrative now, following the required sections exactly.
 Where information is insufficient, note what the applicant should add.
 """
 
 
-def get_refinement_options() -> dict:
-    """Returns {key: label} for all available refinement actions."""
-    return {k: v[0] for k, v in _REFINEMENT_INSTRUCTIONS.items()}
+def build_section_regen_prompt(
+    section_num: int,
+    section_name: str,
+    current_content: str,
+    rfp: str,
+    program: str,
+    tone: str,
+    length: str,
+    funder_type: str,
+    focus_area: str,
+) -> str:
+    return f"""You are an expert grant writer. Rewrite ONLY Section {section_num}: {section_name}.
 
+Settings for this rewrite:
+- Tone: {tone} — {_TONE[tone]}
+- Length: {length} — {_LENGTH[length]}
+- Funder type: {_FUNDER[funder_type]}
+- Focus area: {_FOCUS[focus_area]}
 
-def build_refinement_prompt(key: str, current_draft: str, rfp_text: str = "") -> str:
-    _, instruction = _REFINEMENT_INSTRUCTIONS[key]
-    rfp_block = f"\n\nORIGINAL RFP (for alignment reference):\n{rfp_text}\n" if rfp_text and key == "improve_alignment" else ""
-    return f"{instruction}{rfp_block}\n\n---\nCURRENT DRAFT TO REVISE:\n{current_draft}\n\n---\nReturn the complete revised proposal now."
+ORIGINAL RFP:
+{rfp}
+
+PROGRAM DESCRIPTION:
+{program}
+
+CURRENT SECTION (rewrite this):
+{current_content}
+
+Return ONLY the rewritten section. Start with the exact heading:
+## {section_num}. {section_name}
+
+Do not include other sections, commentary, or preamble.
+"""
