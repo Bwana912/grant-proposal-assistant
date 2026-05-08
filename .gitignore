@@ -11,8 +11,8 @@ env/
 venv/
 .venv/
 
-# Streamlit
-.streamlit/
+# Streamlit — ignore secrets but commit config.toml
+.streamlit/secrets.toml
 
 # OS
 .DS_Store
