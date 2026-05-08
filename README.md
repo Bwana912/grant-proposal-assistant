@@ -44,6 +44,18 @@ the Anthropic Claude API.
 6. Organizational Capacity
 7. Budget Narrative (Brief)
 
+**Why GenAI is the right tool for this task:**
+
+Grant writing is language-intensive, context-dependent, and highly variable across
+funders — exactly the kind of task where large language models outperform simpler
+automation. A template or mail-merge approach cannot read an RFP and mirror its
+specific priorities; keyword search cannot synthesize a coherent narrative; a
+spreadsheet workflow cannot produce persuasive prose. Claude can do all three: it
+reads the funder's language, aligns it to the applicant's program, and produces a
+structured, professional draft in under 30 seconds. The business value is concrete —
+20–40 hours of professional writing time reduced to a reviewable first draft that
+a program officer can refine in an afternoon.
+
 **Key design choices:**
 
 | Choice | Rationale |
@@ -99,14 +111,22 @@ Full test case results are documented in `evaluation/results.md`.
 ## 4. Artifact Snapshot
 
 **App Interface:**  
-Two-column input layout (RFP on the left, program description on the right) 
-with a single "Generate" button and structured markdown output.
+Two-column input layout — funder RFP on the left, program description on the right —
+with a single "Generate Grant Proposal Draft" button. Output renders as structured
+markdown in the app and can be downloaded as a `.txt` file.
 
 **Sample inputs** are provided in the `examples/` folder:
 - `examples/rfp_sample.txt` — A realistic digital equity grant RFP
 - `examples/program_desc.txt` — A sample nonprofit program description
 
-**Sample output** is available in `evaluation/results.md`.
+**Sample output** — a full seven-section grant proposal draft generated from the
+above inputs — is available at:
+- `examples/sample_output.txt`
+
+This output was produced by the app using the sample files and represents the
+quality and structure of a typical generation. Note the final section includes
+an explicit flag from the model noting where the applicant should supply financial
+figures — an example of the app's "flag missing information" behavior.
 
 ---
 
@@ -162,10 +182,12 @@ on a pre-built example.
 grant-proposal-assistant/
 ├── app.py                        # Main Streamlit application
 ├── prompts/
+│   ├── __init__.py
 │   └── grant_prompt.py           # System prompt and user prompt builder
 ├── examples/
 │   ├── rfp_sample.txt            # Sample funder RFP for testing
-│   └── program_desc.txt          # Sample program description for testing
+│   ├── program_desc.txt          # Sample program description for testing
+│   └── sample_output.txt         # Representative app output for Test Case 1
 ├── evaluation/
 │   └── results.md                # Test cases, rubric, and evaluation results
 ├── requirements.txt

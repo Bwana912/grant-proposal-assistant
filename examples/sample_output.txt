@@ -1,0 +1,168 @@
+SAMPLE OUTPUT — Grant Proposal Draft Assistant
+Generated from: examples/rfp_sample.txt + examples/program_desc.txt
+Model: claude-sonnet-4-6
+Note: This is a representative output produced by the app for Test Case 1.
+
+================================================================================
+
+---
+
+## 1. Organizational Background
+
+The DiTi Foundation — Digital Innovation & Technology Inclusion Foundation — is a
+Washington, DC-based 501(c)(3) nonprofit organization with a singular mission: to make
+technology equitably accessible to communities that have historically been excluded from
+the digital economy. Founded on the conviction that access to technology and the skills
+to use it is a civil rights issue, DiTi Foundation works at the intersection of digital
+equity, workforce development, and youth empowerment.
+
+Since 2022, DiTi Foundation has delivered hands-on, practical technology skills
+training to young people in Washington DC's most underserved neighborhoods. Our
+organizational model is grounded in community trust, industry partnership, and rigorous
+program design. We are led by a staff of experienced educators, technologists, and
+community advocates who bring both professional expertise and lived experience to our
+work.
+
+DiTi Foundation has demonstrated consistent organizational capacity through three
+successive program cohorts, sustained community partnerships, and a growing network of
+15 volunteer mentors drawn from the DC technology sector. Our track record of results —
+including a 78% program completion rate and a 65% post-program employment or education
+rate — reflects our commitment to accountability and continuous improvement.
+
+---
+
+## 2. Statement of Need
+
+Washington DC's Ward 7 and Ward 8 communities face some of the most severe digital
+equity gaps in the nation's capital. Broadband access rates in these neighborhoods fall
+below 60%, compared to a citywide average exceeding 85%. Youth unemployment in these
+wards exceeds 25%, more than double the DC average. These are not abstract statistics —
+they represent young people who are being locked out of a technology-driven economy
+before they have had a fair opportunity to participate in it.
+
+The populations DiTi Foundation serves — young people ages 14–24 in Ward 7 and Ward 8
+— face compounding barriers: lack of devices and reliable internet at home, limited
+exposure to professional technology environments, and educational systems that have
+not kept pace with the demands of an AI-enabled workforce. Without targeted
+intervention, these young people risk permanent exclusion from one of the most
+consequential economic sectors of the 21st century.
+
+The urgency of this need has been amplified by the rapid emergence of artificial
+intelligence as a core workplace competency. AI and emerging technology literacy are
+no longer optional skills — they are foundational requirements for career pathways
+in the technology sector. Young people without access to AI literacy training face
+an accelerating skills gap that traditional education systems are not equipped to
+address at the speed or scale required.
+
+---
+
+## 3. Project Description
+
+DiTi Foundation's TechForward Youth Initiative is a 12-week intensive digital skills
+training program designed to equip young people ages 14–24 with the practical,
+career-ready technology skills needed to access employment, higher education, and
+entrepreneurship opportunities in the technology sector. The program is delivered in
+partnership with community anchors in Ward 7 and Ward 8, ensuring that training is
+accessible to youth where they already are.
+
+The TechForward curriculum is structured in three progressive phases. The first four
+weeks establish foundational digital literacy and computer skills, ensuring that all
+participants — regardless of prior access — enter the program on equal footing. Weeks
+five through eight introduce coding fundamentals through Python and web development,
+with an emphasis on project-based learning and real-world application. The final four
+weeks focus on AI literacy and responsible technology use, professional development,
+and career pathway exploration, including direct engagement with technology sector
+employers and mentors.
+
+With support from the Horizon Community Foundation, DiTi Foundation will expand
+TechForward to serve an additional 75 youth in the next program cycle. This expansion
+will include a specific focus on integrating advanced AI literacy content into the
+curriculum, reflecting the Foundation's priority areas of AI and emerging technology
+literacy and career pathways in the technology sector for underrepresented groups.
+Critically, the expansion will also include a device and broadband stipend program
+for participants who lack home internet access — directly addressing the device equity
+and broadband access priorities the Foundation has identified for this grant cycle.
+
+The program will run from September through November 2026, with recruitment beginning
+in July. Program completion will be followed by a structured employer matching process
+and a six-month alumni check-in to track employment and education outcomes.
+
+---
+
+## 4. Goals and Objectives
+
+- **Objective 1:** Enroll and begin training 75 new youth participants (ages 14–24)
+  from Ward 7 and Ward 8 in the TechForward program by September 2026.
+
+- **Objective 2:** Achieve a program completion rate of at least 75%, consistent
+  with or exceeding prior cohort performance.
+
+- **Objective 3:** Ensure that 100% of enrolled participants who lack home internet
+  access receive a device and broadband stipend for the duration of the program.
+
+- **Objective 4:** Deliver a minimum of 20 hours of dedicated AI and emerging
+  technology literacy instruction to all program completers.
+
+- **Objective 5:** Place at least 60% of program completers into tech-related
+  employment, post-secondary education, or a credentialed training program within
+  90 days of program completion.
+
+---
+
+## 5. Evaluation Plan
+
+DiTi Foundation will track progress toward all five program objectives through a
+combination of attendance records, skills assessments, and post-program outcome
+surveys. Pre- and post-program digital skills assessments will measure participant
+learning gains across all curriculum areas, including AI literacy. Program completion
+rates will be tracked in real time, with case managers following up with participants
+who miss two or more consecutive sessions.
+
+Post-program outcomes will be tracked at 30, 60, and 90 days via structured
+follow-up interviews with program completers. Employment and education placement data
+will be collected and verified through employer and institution confirmation. An
+independent summary of program outcomes will be compiled and made available to the
+Horizon Community Foundation within 60 days of program completion, including a
+transparent account of what worked, what did not, and what adjustments will be made
+in subsequent cohorts.
+
+---
+
+## 6. Organizational Capacity
+
+DiTi Foundation is well-positioned to execute this expansion. Our core program staff
+includes three full-time program coordinators with demonstrated experience in youth
+workforce development and digital skills training, two part-time instructors with
+direct industry experience in software development and AI applications, and a network
+of 15 volunteer mentors drawn from the DC technology sector. Our leadership team has
+managed budgets of comparable scale and has a strong track record of responsible
+stewardship of foundation resources.
+
+Our community relationships in Ward 7 and Ward 8 are a core organizational asset.
+We have existing partnerships with community centers, public libraries, and secondary
+schools in both wards, enabling effective recruitment and reducing barriers to
+participation. Three completed program cohorts since 2022 — with consistent completion
+rates above 75% and strong employment outcomes — demonstrate that our model works and
+that our organization has the capacity to deliver results at the scale proposed.
+
+---
+
+## 7. Budget Narrative (Brief)
+
+Grant funds from the Horizon Community Foundation will be used to support three
+primary cost categories: personnel, participant support, and program materials.
+The largest portion of the budget supports program staffing, including proportional
+salary and benefits costs for program coordinators and part-time instructors directly
+responsible for delivering TechForward services. Participant support costs include
+the device and broadband stipend program for youth who lack home internet access —
+a direct response to the Foundation's device equity priority. Program materials
+include curriculum development costs for integrating advanced AI literacy content,
+as well as supplies and technology resources needed for hands-on training activities.
+
+[NOTE FROM APP: To strengthen this section, please provide your organization's
+projected budget figures, including total program cost, amount requested, and any
+matching or leveraged funds. Funders typically expect a budget narrative to specify
+dollar amounts and demonstrate cost-effectiveness.]
+
+================================================================================
+END OF SAMPLE OUTPUT
