@@ -120,7 +120,7 @@ with a single "Generate" button and structured markdown output.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/grant-proposal-assistant.git
+git clone https://github.com/Bwana912/grant-proposal-assistant.git
 cd grant-proposal-assistant
 
 # 2. Install dependencies
