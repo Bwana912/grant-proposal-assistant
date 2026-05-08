@@ -1,0 +1,44 @@
+SAMPLE PROGRAM DESCRIPTION — For Testing Purposes Only
+
+---
+
+Organization: DiTi Foundation (Digital Innovation & Technology Inclusion Foundation)
+Location: Washington, DC
+Status: 501(c)(3) Nonprofit
+
+---
+
+MISSION
+
+The DiTi Foundation exists to make technology equitably accessible to communities 
+that have historically been excluded from the digital economy. We believe that 
+access to technology — and the skills to use it — is a civil rights issue.
+
+---
+
+PROGRAM: TechForward Youth Initiative
+
+Our flagship program, TechForward, is a 12-week intensive digital skills training 
+program for young people ages 14–24 in Washington DC's Ward 7 and Ward 8 communities — 
+two of the most underserved areas in the city, where broadband access rates fall 
+below 60% and youth unemployment exceeds 25%.
+
+The program covers:
+- Foundational digital literacy and computer skills
+- Introduction to coding (Python and web development)
+- AI literacy and responsible technology use
+- Professional development and technology career pathways
+
+Since launching in 2022, TechForward has served over 300 young people. 
+Program outcomes include:
+- 78% program completion rate
+- 65% of completers went on to tech-related employment or post-secondary education
+- 90% of participants reported increased confidence using technology professionally
+
+Our staff includes three full-time program coordinators, two part-time instructors 
+with industry experience, and a network of 15 volunteer mentors from the DC tech sector.
+
+We are seeking funding to expand TechForward to serve an additional 75 youth in 
+the next program cycle, with a specific focus on integrating AI literacy into the 
+curriculum and providing devices and broadband stipends to participants who lack 
+home internet access.
