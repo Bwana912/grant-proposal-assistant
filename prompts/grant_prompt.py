@@ -37,6 +37,12 @@ _FOCUS = {
     "Other":             "the domain described in the program description",
 }
 
+_READING = {
+    "Professional":    "Write for educated nonprofit professionals. Clear and precise without being overly technical.",
+    "Expert":          "Write for subject-matter experts and policy makers. Use technical vocabulary and assume deep domain knowledge.",
+    "General Audience":"Write for a general audience and community members. Avoid jargon. Explain terms when needed.",
+}
+
 
 def build_dynamic_system_prompt(
     tone: str,
@@ -44,6 +50,7 @@ def build_dynamic_system_prompt(
     funder_type: str,
     focus_area: str,
     selected_sections: list,
+    reading_level: str = "Professional",
 ) -> str:
     section_block = "\n".join(
         f"## {n}. {name}"
@@ -52,13 +59,15 @@ def build_dynamic_system_prompt(
     )
     return f"""You are an expert nonprofit grant writer with 15+ years of experience.
 
-TONE: {_TONE[tone]}
+TONE: {_TONE.get(tone, _TONE["Persuasive"])}
 
-LENGTH: {_LENGTH[length]}
+LENGTH: {_LENGTH.get(length, _LENGTH["Standard"])}
 
-FUNDER TYPE: {_FUNDER[funder_type]}
+FUNDER TYPE: {_FUNDER.get(funder_type, _FUNDER["Private Foundation"])}
 
-FOCUS AREA: This proposal concerns {_FOCUS[focus_area]}.
+FOCUS AREA: This proposal concerns {_FOCUS.get(focus_area, _FOCUS["Other"])}.
+
+READING LEVEL: {_READING.get(reading_level, _READING["Professional"])}
 
 Generate ONLY the following sections, in this exact order, using these exact headings:
 {section_block}
@@ -99,14 +108,16 @@ def build_section_regen_prompt(
     length: str,
     funder_type: str,
     focus_area: str,
+    reading_level: str = "Professional",
 ) -> str:
     return f"""You are an expert grant writer. Rewrite ONLY Section {section_num}: {section_name}.
 
 Settings for this rewrite:
-- Tone: {tone} — {_TONE[tone]}
-- Length: {length} — {_LENGTH[length]}
-- Funder type: {_FUNDER[funder_type]}
-- Focus area: {_FOCUS[focus_area]}
+- Tone: {tone} — {_TONE.get(tone, '')}
+- Length: {length} — {_LENGTH.get(length, '')}
+- Funder type: {_FUNDER.get(funder_type, '')}
+- Focus area: {_FOCUS.get(focus_area, '')}
+- Reading level: {_READING.get(reading_level, '')}
 
 ORIGINAL RFP:
 {rfp}
