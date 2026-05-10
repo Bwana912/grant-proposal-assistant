@@ -1,58 +1,66 @@
-SAMPLE RFP — For Testing Purposes Only
-Source: Based on publicly available foundation grant guidelines (synthetic example)
-
----
-
-DIGITAL EQUITY YOUTH PROGRAM GRANT — REQUEST FOR PROPOSALS
-
-Funder: The Horizon Community Foundation
-Grant Amount: Up to $50,000
-Deadline: Rolling basis
-Eligible Applicants: 501(c)(3) nonprofit organizations
-
----
+REQUEST FOR PROPOSALS
+Horizon Community Foundation — Digital Equity Initiative 2026
+Deadline: June 15, 2026 | Award: Up to $50,000 | Duration: 12 months
 
 OVERVIEW
-
-The Horizon Community Foundation invites proposals from nonprofit organizations working 
-to advance digital equity and technology access for underserved youth between the ages 
-of 14 and 24 in urban communities across the Washington DC metropolitan area.
-
-We are particularly interested in programs that:
-- Provide hands-on, practical technology skills training
-- Demonstrate a clear and measurable theory of change
-- Serve populations with limited prior access to technology resources
-- Include a pathway to employment, higher education, or entrepreneurship
-- Have demonstrated organizational capacity and a track record of results
-
----
+The Horizon Community Foundation invites 501(c)(3) nonprofit organizations to submit proposals
+for its Digital Equity Initiative Grant. This funding cycle prioritizes programs that expand
+meaningful internet access and digital skills training for underserved residents in the
+Washington, DC metropolitan area, including Wards 7 and 8.
 
 FUNDING PRIORITIES
+We will give preference to proposals that:
+- Serve residents in historically underconnected neighborhoods (Wards 7, 8, and Prince George County)
+- Demonstrate evidence-based curriculum and measurable skill outcomes
+- Include partnerships with schools, libraries, or workforce development organizations
+- Address barriers beyond device and connectivity including confidence, language, and relevance
+- Serve populations including youth (ages 10-24), seniors (60+), or adults seeking employment
 
-This grant cycle, the Foundation is prioritizing proposals that address:
-1. AI and emerging technology literacy for youth
-2. Broadband access and device equity
-3. Career pathways in the technology sector for underrepresented groups
+ELIGIBILITY REQUIREMENTS
+Applicants must:
+- Be a 501(c)(3) nonprofit organization in good standing
+- Have an annual operating budget of at least $100,000
+- Have been in operation for at least two years
+- Serve residents primarily within Washington, DC or Prince George County, Maryland
+- Not be a government agency or institution of higher education
 
----
+REQUIRED APPLICATION SECTIONS
+1. Executive Summary (max 500 words)
+2. Statement of Need (max 750 words) - Local data on the digital access gap
+3. Program Description (max 1,000 words) - Goals, activities, timeline, evidence base
+4. Measurable Outcomes - At least 3 SMART objectives with data collection methods
+5. Organizational Capacity - Track record, staff qualifications, partnerships
+6. Budget Narrative - Line-item budget with justification
+7. Sustainability Plan (max 300 words)
 
-PROPOSAL REQUIREMENTS
+REQUIRED ATTACHMENTS
+- Most recent IRS Form 990 or 990-EZ
+- Current year operating budget
+- Letters of support from at least two community partners
+- List of current board members with affiliations
 
-Proposals must include:
-- Organizational background and mission
-- Statement of community need with supporting data
-- Program description including activities, timeline, and target population
-- Measurable goals and objectives
-- Evaluation plan
-- Brief budget narrative
+KEY NUMBERS
+- Award amount: $25,000-$50,000 (average award: $38,000)
+- Maximum overhead/indirect costs: 15% of total request
+- Minimum participants served: 75 individuals during grant period
+- Application deadline: June 15, 2026 at 11:59 PM Eastern
+- Grant period: September 1, 2026 through August 31, 2027
+- Decisions announced: August 1, 2026
 
----
+WATCH OUT FOR
+- Applications missing any required section will be automatically disqualified
+- Budget requests exceeding $50,000 will not be considered
+- Indirect costs above 15% require written justification
+- Letters of support must be on organizational letterhead and signed
+- Proposals focused solely on hardware distribution without training are not eligible
 
-EVALUATION CRITERIA
+REVIEW CRITERIA (100 points)
+- Community need and target population: 25 points
+- Program design and evidence base: 25 points
+- Measurable outcomes and evaluation plan: 20 points
+- Organizational capacity and partnerships: 20 points
+- Budget clarity and sustainability: 10 points
 
-Proposals will be evaluated on:
-- Clarity and specificity of the need statement
-- Feasibility and strength of the program design
-- Quality and measurability of outcomes
-- Evidence of organizational capacity
-- Alignment with Foundation priorities
+SUBMISSION
+Submit via online portal at horizonfoundation.org/grants by June 15, 2026.
+Questions: grants@horizonfoundation.org | 202-555-0190

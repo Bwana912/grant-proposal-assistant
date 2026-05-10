@@ -1,44 +1,54 @@
-SAMPLE PROGRAM DESCRIPTION — For Testing Purposes Only
-
----
-
-Organization: DiTi Foundation (Digital Innovation & Technology Inclusion Foundation)
-Location: Washington, DC
-Status: 501(c)(3) Nonprofit
-
----
+ORGANIZATION: BrightPath Community Learning Initiative
+TYPE: 501(c)(3) Nonprofit | Founded 2018 | Washington, DC
+ANNUAL BUDGET: $620,000
 
 MISSION
+BrightPath Community Learning Initiative connects underserved Washington, DC residents
+with digital skills and technology access they need to participate fully in today economy,
+civic life, and educational opportunities.
 
-The DiTi Foundation exists to make technology equitably accessible to communities 
-that have historically been excluded from the digital economy. We believe that 
-access to technology — and the skills to use it — is a civil rights issue.
+PROGRAM: TechForward Youth Coding Academy
 
----
+TARGET POPULATION
+Youth ages 13-18 in Washington, DC Wards 7 and 8, where 34% of households lack
+reliable home broadband access (DC OCTO, 2023) and high school graduation rates trail
+citywide averages by 12 percentage points.
 
-PROGRAM: TechForward Youth Initiative
+PROGRAM DESCRIPTION
+TechForward is a 16-week after-school coding and digital literacy bootcamp running
+September through December each year. Participants meet three evenings per week at
+learning centers co-located inside Anacostia High School and Thurgood Marshall Academy.
 
-Our flagship program, TechForward, is a 12-week intensive digital skills training 
-program for young people ages 14–24 in Washington DC's Ward 7 and Ward 8 communities — 
-two of the most underserved areas in the city, where broadband access rates fall 
-below 60% and youth unemployment exceeds 25%.
+Curriculum covers four modules:
+1. Digital Foundations (Weeks 1-3): Internet literacy, online safety, productivity tools
+2. Python Basics (Weeks 4-8): Variables, loops, functions, simple programs
+3. Web Development (Weeks 9-13): HTML, CSS, JavaScript, personal portfolio
+4. Career Pathways (Weeks 14-16): Resume, LinkedIn, tech career exploration
 
-The program covers:
-- Foundational digital literacy and computer skills
-- Introduction to coding (Python and web development)
-- AI literacy and responsible technology use
-- Professional development and technology career pathways
+Each cohort serves 50 students. We run two cohorts per year for 200 students annually.
+All devices, internet hotspots, and materials are provided at no cost to participants.
 
-Since launching in 2022, TechForward has served over 300 young people. 
-Program outcomes include:
-- 78% program completion rate
-- 65% of completers went on to tech-related employment or post-secondary education
-- 90% of participants reported increased confidence using technology professionally
+PARTNERSHIPS
+- Anacostia High School (DCPS): classroom space, student recruitment, academic credit
+- Thurgood Marshall Academy PCS: co-location and wraparound support
+- NPower: alumni job placement pipeline and industry certification pathways
+- Booz Allen Hamilton: volunteer mentors and mock interview support
+- DC Public Library: digital inclusion programming integration
 
-Our staff includes three full-time program coordinators, two part-time instructors 
-with industry experience, and a network of 15 volunteer mentors from the DC tech sector.
+OUTCOMES (2023-2024 Annual Report)
+- 200 students completed the program (78% completion rate)
+- 94% of completers showed measurable improvement on digital skills assessment
+- 45% of graduates enrolled in post-secondary STEM program within 6 months
+- 85% of participants reported increased confidence using technology for school or work
+- 12 alumni placed in paid tech internships through NPower partnership
 
-We are seeking funding to expand TechForward to serve an additional 75 youth in 
-the next program cycle, with a specific focus on integrating AI literacy into the 
-curriculum and providing devices and broadband stipends to participants who lack 
-home internet access.
+STAFF
+- Program Director: Maria Okonkwo, M.Ed., 9 years youth workforce development experience
+- Lead Instructors: 3 certified educators with computer science backgrounds
+- Program Coordinator: scheduling, attendance, and family communication
+- Data Manager: tracks outcomes using Salesforce NPSP
+
+SUSTAINABILITY
+BrightPath funding mix: 38% government grants, 31% foundation grants,
+21% corporate partnerships, 10% individual donors. Pursuing multi-year commitments
+from two current funders and in conversations with Amazon Future Engineer for 2027.
